@@ -109,6 +109,24 @@ namespace Contornos
 
                     }
 
+
+                    if (aprox.Size > 6)
+                    {
+
+                        CvInvoke.PutText(_imgInput, "Circulo", new Point(x, y), Emgu.CV.CvEnum.FontFace.HersheySimplex, 0.5, new MCvScalar(0, 0, 255), 2);
+
+                    }
+
+                    pictureBox2.Image = _imgInput.Bitmap;
+
+
+                    if (aprox.Size == 6)
+                    {
+
+                        CvInvoke.PutText(_imgInput, "Hexagono", new Point(x, y), Emgu.CV.CvEnum.FontFace.HersheySimplex, 0.5, new MCvScalar(0, 0, 255), 2);
+
+                    }
+
                     pictureBox2.Image = _imgInput.Bitmap;
 
                 }
